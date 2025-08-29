@@ -11,7 +11,6 @@ The portfolio is built from scratch using **Next.js + TypeScript** and fully mai
 - 🧑‍💻 About Me section  
 - 🛠️ Skills & Tech Stack showcase  
 - 📂 Projects with live demos & GitHub links  
-- 📝 Blog/Articles section (optional, to share thoughts & learnings)  
 - 📄 Downloadable Resume  
 - 📬 Contact form with validation (Formik + Yup)  
 - 📱 Mobile-friendly design with responsive layout  
