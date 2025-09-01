@@ -4,7 +4,7 @@ import AppShell from "./components/app-shell/AppShell";
 import { StyledComponentsRegistry } from "./style/registry";
 
 export const metadata: Metadata = {
-  title: "rv-Portfolio",
+  title: "Portfolio",
   description: "",
 };
 

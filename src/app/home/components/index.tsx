@@ -1,4 +1,4 @@
-export * from "./";
+export * from "./hero";
 export * from "./";
 export * from "./";
 export * from "./";

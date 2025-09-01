@@ -40,6 +40,8 @@ html {
     height: 100%;
     font-family: poppins, sans-serif;
     overflow-x: hidden;
+    background: #191D28;
+    background-attachment: fixed;
   }
 
     * {
