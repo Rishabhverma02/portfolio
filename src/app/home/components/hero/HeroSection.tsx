@@ -11,6 +11,8 @@ export const HeroSection = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
+      id="hero"
+
     >
       <div
         style={{
@@ -19,6 +21,8 @@ export const HeroSection = () => {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
+          paddingTop:"100px "
+
         }}
       >
         <div

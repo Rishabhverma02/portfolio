@@ -1,12 +1,21 @@
 "use client";
 import React from "react";
-import { HeroSection } from "./components";
-
+import {
+  AboutMe,
+  ContactMe,
+  HeroSection,
+  Projects,
+  Skills,
+} from "./components";
 
 export const Home = () => {
   return (
-   <>
-   <HeroSection/>
-   </>
+    <>
+      <HeroSection />
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <ContactMe />
+    </>
   );
 };

@@ -2,12 +2,22 @@
 import { theme } from "@/app/theme";
 import styled from "styled-components";
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.main`
   width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0px;
+  padding: 20px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+`;
+
+export const HeaderContainer = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const HamburgerButton = styled.button`
@@ -97,4 +107,19 @@ export const DrawerContent = styled.div`
   flex-direction: column;
   color: #ffffff;
   text-align: center;
+`;
+
+
+export const SocialIconWrapper = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
+ color: #ffff;
+`;
+
+export const Logo = styled.h1`
+ color: #eabc17;
+ font-size: 30px;
+ font-family: "Josefin Sans", sans-serif;
 `;

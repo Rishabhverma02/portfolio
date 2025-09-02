@@ -1,9 +1,6 @@
 export * from "./hero";
-export * from "./";
-export * from "./";
-export * from "./";
-export * from "./";
-export * from "./";
-export * from "./";
-export * from "./";
-export * from "./";
+export * from "./about";
+export * from "./contact";
+export * from "./projects";
+export * from "./skills";
+
