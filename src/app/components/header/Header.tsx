@@ -49,15 +49,15 @@ export const Header = () => {
     <>
       <HeaderWrapper animate={animate}>
         <HeaderContainer>
-          <Logo>Rishi..</Logo>
+          <Logo className="text-30">&lt; R.v &gt;</Logo>
           <NavigationBar />
           <SocialIconWrapper>
-            <FaGithub size={18} className="social-icon" />
-            <IoLogoInstagram size={18} className="social-icon" />
-            <IoLogoLinkedin size={18} className="social-icon" />
+            <FaGithub  className="text-18 social-icon"  />
+            <IoLogoInstagram  className="text-18 social-icon" />
+            <IoLogoLinkedin  className="text-18 social-icon" />
           </SocialIconWrapper>
           <HamburgerButton onClick={openDrawer} aria-label="Open Menu">
-            <HiMenuAlt3 className="menu-icon" />
+            <HiMenuAlt3 className="text-20" />
           </HamburgerButton>
         </HeaderContainer>
       </HeaderWrapper>
@@ -66,7 +66,7 @@ export const Header = () => {
         <DrawerOverlay onClick={closeDrawer}>
           <Drawer onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={closeDrawer} aria-label="Close Menu">
-              <HiX className="close-icon" />
+              <HiX className="text-20" />
             </CloseButton>
             <DrawerContent>This is sidebar</DrawerContent>
           </Drawer>

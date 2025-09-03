@@ -19,7 +19,6 @@ export const NavLinks = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
   position: relative;
   transition: color 0.3s ease;
 

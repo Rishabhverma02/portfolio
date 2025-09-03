@@ -54,11 +54,8 @@ export const HamburgerButton = styled.button`
   padding: 10px 12px;
   cursor: pointer;
   z-index: 10;
+  color: ${theme.COLOR.OFFWHITE};
 
-  .menu-icon {
-    font-size: 20px;
-    color: ${theme.COLOR.OFFWHITE};
-  }
 
   @media screen and (min-width: 1080.98px) {
     display: none;
@@ -117,11 +114,8 @@ export const CloseButton = styled.button`
   align-self: flex-end;
   display: flex;
   justify-content: center;
+  color: ${theme.COLOR.OFFWHITE};
 
-  .close-icon {
-    font-size: 20px;
-    color: ${theme.COLOR.OFFWHITE};
-  }
 `;
 
 export const DrawerContent = styled.div`
@@ -141,7 +135,7 @@ export const SocialIconWrapper = styled.div`
   align-items: center;
   gap: 20px;
   color: #ffff;
-
+  
   .social-icon {
     transition: color 0.3s ease; 
   }
@@ -153,6 +147,5 @@ export const SocialIconWrapper = styled.div`
 
 export const Logo = styled.h1`
  color: #eabc17;
- font-size: 30px;
  font-family: "Josefin Sans", sans-serif;
 `;

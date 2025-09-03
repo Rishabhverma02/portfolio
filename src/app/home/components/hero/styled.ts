@@ -1,3 +1,4 @@
+import { text12, text16, text38 } from "@/app/style/typography";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -16,7 +17,7 @@ export const HeroContentContainer = styled.div`
 `;
 
 export const IntroContainer = styled.div`
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -34,23 +35,24 @@ export const GreetingContainer = styled.div`
    }
 `;
 export const Greeting = styled.h2`
- font-size: 12px;
+ ${text12}
  color: #eabc17;
  text-transform: uppercase;
 `;
 export const Intro = styled.h1`
-   font-size: 38px;
+   ${text38}
    color: #ffff;
    span{
       color: #eabc17;
    }
 `;
 export const IntroDesc = styled.p`
+  ${text16}
    color: #ffff;
 `;
 
 export const ImageContainer = styled.div`
-   width: 60%;
+   width: 50%;
    display: flex;
    align-items: center;
    justify-content: center;
