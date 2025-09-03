@@ -1,8 +1,19 @@
 "use Client";
 import { theme } from "@/app/theme";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
-export const HeaderWrapper = styled.main`
+const dropDown = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
+
+export const HeaderWrapper = styled.header.withConfig({
+  shouldForwardProp: (prop) => prop !== "animate",
+})<{ animate: boolean }>`
   width: 100%;
   height: 90px;
   position: fixed;
@@ -11,7 +22,21 @@ export const HeaderWrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 10;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+
+  ${(props) =>
+    props.animate
+      ? css`
+          background: rgba(24, 24, 24, 0.4);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          animation: ${dropDown} 0.4s ease-out;
+        `
+      : css`
+          background: transparent;
+          backdrop-filter: none;
+        `}
 `;
 
 export const HeaderContainer = styled.div`
@@ -111,11 +136,19 @@ export const DrawerContent = styled.div`
 
 
 export const SocialIconWrapper = styled.div`
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 20px;
- color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #ffff;
+
+  .social-icon {
+    transition: color 0.3s ease; 
+  }
+
+  .social-icon:hover {
+    color: #eabc17;
+  }
 `;
 
 export const Logo = styled.h1`

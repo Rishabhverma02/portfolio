@@ -16,27 +16,45 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 import { usePathname } from "next/navigation";
 import { NavigationBar } from "../common";
-import {  GithubIcon, Instagram, Linkedin } from "lucide-react";
+import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
 
 export const Header = () => {
+  const [animate, setAnimate] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const openDrawer = () => setIsOpen(true);
   const closeDrawer = () => setIsOpen(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        setAnimate(true);
+      } else {
+        setAnimate(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper animate={animate}>
         <HeaderContainer>
           <Logo>Rishi..</Logo>
           <NavigationBar />
           <SocialIconWrapper>
-            <GithubIcon size={18} />
-            <Instagram size={18} />
-            <Linkedin size={18} />
+            <FaGithub size={18} className="social-icon" />
+            <IoLogoInstagram size={18} className="social-icon" />
+            <IoLogoLinkedin size={18} className="social-icon" />
           </SocialIconWrapper>
           <HamburgerButton onClick={openDrawer} aria-label="Open Menu">
             <HiMenuAlt3 className="menu-icon" />

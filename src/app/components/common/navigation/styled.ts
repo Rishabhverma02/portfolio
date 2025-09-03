@@ -24,13 +24,13 @@ export const NavLinks = styled(Link)`
   transition: color 0.3s ease;
 
   &:hover {
-    /* color: #eabc17; */
+   color: #eabc17;
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -3px;
     left: 0;
     width: 0%;
     height: 1px;
@@ -39,14 +39,6 @@ export const NavLinks = styled(Link)`
   }
 
   &:hover::after {
-    width: 100%;
-  }
-
-  &.active {
-    color: #eabc17;
-  }
-
-  &.active::after {
     width: 100%;
   }
 `;
