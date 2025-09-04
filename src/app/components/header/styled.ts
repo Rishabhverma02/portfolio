@@ -1,4 +1,5 @@
 "use Client";
+import { text18, text20, text30 } from "@/app/style/typography";
 import { theme } from "@/app/theme";
 import styled, { css, keyframes } from "styled-components";
 
@@ -15,7 +16,6 @@ export const HeaderWrapper = styled.header.withConfig({
   shouldForwardProp: (prop) => prop !== "animate",
 })<{ animate: boolean }>`
   width: 100%;
-  height: 90px;
   position: fixed;
   top: 0px;
   padding: 20px 0px;
@@ -28,7 +28,7 @@ export const HeaderWrapper = styled.header.withConfig({
   ${(props) =>
     props.animate
       ? css`
-          background: rgba(24, 24, 24, 0.4);
+          background: rgba(68, 68, 68, 0.4);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
           animation: ${dropDown} 0.4s ease-out;
@@ -43,9 +43,16 @@ export const HeaderContainer = styled.div`
   width: 80%;
   display: flex;
   justify-content: space-between;
+  
+ @media (max-width: 1080px) {
+  width: 90%;
+  }
 `;
 
 export const HamburgerButton = styled.button`
+  ${text20}
+  display: flex;
+  align-items: center;
   background: rgba(24, 24, 24, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -104,6 +111,7 @@ export const Drawer = styled.div`
 `;
 
 export const CloseButton = styled.button`
+  ${text20}
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(8px);
@@ -130,6 +138,7 @@ export const DrawerContent = styled.div`
 
 
 export const SocialIconWrapper = styled.div`
+  ${text18}
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,9 +152,14 @@ export const SocialIconWrapper = styled.div`
   .social-icon:hover {
     color: #eabc17;
   }
+     
+   @media (max-width: 1080px) {
+      display: none;
+   }
 `;
 
 export const Logo = styled.h1`
+ ${text30}
  color: #eabc17;
  font-family: "Josefin Sans", sans-serif;
 `;

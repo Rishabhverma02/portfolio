@@ -1,4 +1,5 @@
 "use client";
+import { text14 } from "@/app/style/typography";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -14,6 +15,7 @@ export const NavLinkContainer = styled.div`
 `;
 
 export const NavLinks = styled(Link)`
+  ${text14}
   color: #fff;
   text-decoration: none;
   display: flex;

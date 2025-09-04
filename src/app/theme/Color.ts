@@ -63,30 +63,4 @@ export enum COLOR {
   ENERGY_LEVEL_PINK_50 = "#F18CB8",
   ENERGY_LEVEL_PINK_75 = "#EB609E",
   ENERGY_LEVEL_PINK_100 = "#D11E70",
-
-  // EXTRA COLORS
-
-  // color: "#4CAF50",
-  // color: "#C5E763",
-  // color: "#8B6F47",
-  // color: "#FFD95A",
-  // color: "#E7F2F8",
-
-  // color: "#1B4332",
-  // color: "  #2D6A4F",
-  // color: "  #3A7D44",
-  // color: "  #588157",
-  // color: "  #A3B18A",
-
-  // color: "  #3E2C1C",
-  // color: "#4E342E",
-  // color: "#5D3A00",
-  // color: "#7E5A3A",
-  // color: "#A47551",
-
-  // color: "#3E2C1C",
-  // color: "#5C4033",
-  // color: "#7F5539",
-  // color: "#A47148",
-  // color: "#DDB892",
 }
