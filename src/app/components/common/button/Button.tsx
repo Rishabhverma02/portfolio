@@ -13,7 +13,7 @@ export const Button = ({
   onClick,
   children,
 }: ButtonProps) => {
-  const content = <ButtonText>{children || buttonText}</ButtonText>;
+  const content = <ButtonText className="button-text">{children || buttonText}</ButtonText>;
 
   return route ? (
     <ButtonWrapper href={`/${route}`}>{content}</ButtonWrapper>

@@ -2,6 +2,7 @@ import React from 'react'
 import portfolioImg from "@/app/assets/images/hero.png";
 import portfolioImgBg from "@/app/assets/images/hero-bg1.png";
 import { HeroContentContainer, IntroContainer, HeroWrapper, ImageContainer, Intro, GreetingContainer, Greeting, IntroDesc, HeroBgImage, HeroImage } from './styled';
+import { Button } from '@/app/components';
 
 export const HeroSection = () => {
   return (
@@ -19,6 +20,13 @@ export const HeroSection = () => {
             Ullam quasi nisi aut odit consequatur quia earum. Officia, facere
             doloremque?
           </IntroDesc>
+          {/* <div style={{color:"#ccc"}}>
+            <p className='mini-text'>mini-text</p>
+            <p className='nav-text'>nav-text</p>
+            <p className='drawer=text'>drawer-text</p>
+            <button className='button-text'>button</button>
+          </div> */}
+          <Button buttonText='contact for more'/>
         </IntroContainer>
         <ImageContainer>
           <HeroImage

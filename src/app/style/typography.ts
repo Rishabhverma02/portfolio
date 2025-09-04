@@ -45,6 +45,37 @@ export const Typography = createGlobalStyle`
   .ls-tight { letter-spacing: -0.5px; }
   .ls-normal { letter-spacing: 0; }
   .ls-wide { letter-spacing: 1px; }
+
+/* Mini Text – smallest labels, captions, hints */
+.mini-text {
+  font-size: clamp(0.6rem, 1.2vw, 0.75rem); /* ~12px */
+  font-weight: 400;
+  color: #999; 
+}
+
+/* Nav Text – top navigation, links, headers */
+.nav-text {
+  font-size: clamp(0.7rem, 1.4vw, 0.875rem); /* ~14px */
+  font-weight: 500;
+  color: #eee;
+}
+
+/* Mobile Drawer / Sidebar Nav */
+.drawer-text {
+  font-size: clamp(0.7rem, 1.4vw, 0.875rem); /* ~14px */
+  font-weight: 600; 
+  color: #fff;
+}
+
+/* Button Text */
+.button-text {
+  font-size: clamp(0.8rem, 1.6vw, 1rem); /* ~16px */
+  font-weight: 500; 
+  text-transform: capitalize; 
+  text-align: center;
+}
+
+
 `;
 
 export const text12 = css`

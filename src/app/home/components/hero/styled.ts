@@ -51,20 +51,50 @@ export const IntroDesc = styled.p`
    color: #ffff;
 `;
 
+// export const ImageContainer = styled.div`
+//    width: 50%;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+// `;
+
+// export const HeroImage = styled(Image)`
+//    position: relative;
+//    z-index: 1;
+// `;
+// export const HeroBgImage = styled(Image)`
+//    width: 50%;
+//    position: absolute;
+//    opacity: 0.1;
+//    top: 20%;
+// `;
+
+
 export const ImageContainer = styled.div`
-   width: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  width: 50%;
+  aspect-ratio: 15 / 9;   /* fixed picture frame */
+  position: relative;     /* for absolute positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;       /* avoid overflow issues */
 `;
 
 export const HeroImage = styled(Image)`
-   position: relative;
-   z-index: 1;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;       /* keeps proportion */
+  position: relative;
+  z-index: 2;              /* above background */
 `;
+
 export const HeroBgImage = styled(Image)`
-   width: 50%;
-   position: absolute;
-   opacity: 0.1;
-   top: 20%;
+  width: 80%;
+  height: 100%;
+  /* object-fit: cover;       */
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  opacity: 0.1;            /* faded background */
+  z-index: 1;
 `;

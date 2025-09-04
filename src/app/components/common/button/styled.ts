@@ -23,21 +23,16 @@ const BaseButtonStyles = css`
   &:hover {
     background-color: ${COLOR.PRIMARY};
   }
-
-
 `;
 
 export const ButtonWrapper = styled(Link)`
   ${BaseButtonStyles}
 `;
 
-export const OnClickButtonWrapper = styled.div`
+export const OnClickButtonWrapper = styled.button`
   ${BaseButtonStyles}
 `;
 
 export const ButtonText = styled.p`
   color: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
 `;
