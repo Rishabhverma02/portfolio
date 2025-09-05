@@ -39,29 +39,57 @@ export const text40 = css`font-size: clamp(2rem, 4vw, 2.5rem);`;
 export const text48 = css`font-size: clamp(2.4rem, 4.8vw, 3rem);`;
 
 
+// /* ---------- Predefined Roles ---------- */
+// export const description = css`
+//   ${text16};
+//   font-weight: 400;
+//   line-height: 1.6;
+//   color: #ccc;
+// `;
+
+// export const buttonText = css`
+//   ${text16};
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   letter-spacing: 0.5px;
+// `;
+
+// export const drawerNavText = css`
+//   ${text14};
+//   font-weight: 600;
+// `;
+
+// export const miniText = css`
+//   ${text12};
+//   font-weight: 400;
+//   color: #aaa;
+// `;
+
+
 /* ---------- Predefined Roles ---------- */
 export const description = css`
   ${text16};
-  font-weight: 400;
+  font-weight: ${({ theme }) => theme.typography?.weight?.regular || 400};
   line-height: 1.6;
-  color: #ccc;
+  color: ${({ theme }) => theme.colors.text.secondary};
 `;
 
 export const buttonText = css`
   ${text16};
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.typography?.weight?.semibold || 600};
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: ${({ theme }) => theme.colors.text.inverted};
 `;
 
 export const drawerNavText = css`
   ${text14};
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.typography?.weight?.medium || 600};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;
 
 export const miniText = css`
   ${text12};
-  font-weight: 400;
-  color: #aaa;
+  font-weight: ${({ theme }) => theme.typography?.weight?.regular || 400};
+  color: ${({ theme }) => theme.colors.text.muted};
 `;
-

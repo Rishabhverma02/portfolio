@@ -1,5 +1,6 @@
 import React from 'react'
-import portfolioImg from "@/app/assets/images/hero.png";
+// import portfolioImg from "@/app/assets/images/hero.png";
+import portfolioImg from "@/app/assets/images/rishabh.color.portfolio.png";
 import portfolioImgBg from "@/app/assets/images/hero-bg1.png";
 import { HeroContentContainer, IntroContainer, HeroWrapper, ImageContainer, Intro, GreetingContainer, Greeting, IntroDesc, HeroBgImage, HeroImage, ContentWrapper } from './styled';
 import { Button } from '@mui/material';

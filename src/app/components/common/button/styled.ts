@@ -1,13 +1,13 @@
 "use client";
 
-import { COLOR } from "@/app/theme/Color";
+// import { COLOR } from "@/app/theme/Color";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
 const BaseButtonStyles = css`
   width: fit-content;
-  background-color: ${COLOR.SECONDARY};
-  color: ${COLOR.OFFWHITE};
+  /* background-color:  */
+  /* color: */
   text-decoration: none;
   border: none;
   border-radius: 50px;
@@ -21,7 +21,7 @@ const BaseButtonStyles = css`
     transform 0.15s ease;
 
   &:hover {
-    background-color: ${COLOR.PRIMARY};
+    /* background-color:  */
   }
 `;
 

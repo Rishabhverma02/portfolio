@@ -1,6 +1,5 @@
 "use Client";
 import { text18, text20, text30 } from "@/app/style/typography";
-import { theme } from "@/app/theme";
 import styled, { css, keyframes } from "styled-components";
 
 const dropDown = keyframes`
@@ -11,6 +10,33 @@ const dropDown = keyframes`
     transform: translateY(0);
   }
 `;
+
+// export const HeaderWrapper = styled.header.withConfig({
+//   shouldForwardProp: (prop) => prop !== "animate",
+// })<{ animate: boolean }>`
+//   width: 100%;
+//   position: fixed;
+//   top: 0px;
+//   padding: 20px 0px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 10;
+//   transition: background 0.3s ease, backdrop-filter 0.3s ease;
+
+//   ${(props) =>
+//     props.animate
+//       ? css`
+//           background: rgba(68, 68, 68, 0.4);
+//           backdrop-filter: blur(10px);
+//           -webkit-backdrop-filter: blur(10px);
+//           animation: ${dropDown} 0.4s ease-out;
+//         `
+//       : css`
+//           background: transparent;
+//           backdrop-filter: none;
+//         `}
+// `;
 
 export const HeaderWrapper = styled.header.withConfig({
   shouldForwardProp: (prop) => prop !== "animate",
@@ -25,10 +51,10 @@ export const HeaderWrapper = styled.header.withConfig({
   z-index: 10;
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
 
-  ${(props) =>
-    props.animate
+  ${({ animate, theme }) =>
+    animate
       ? css`
-          background: rgba(68, 68, 68, 0.4);
+          background: ${theme.colors.background.glassStrong};
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
           animation: ${dropDown} 0.4s ease-out;
@@ -38,6 +64,7 @@ export const HeaderWrapper = styled.header.withConfig({
           backdrop-filter: none;
         `}
 `;
+
 
 export const HeaderContainer = styled.div`
   width: 80%;
@@ -49,20 +76,38 @@ export const HeaderContainer = styled.div`
   }
 `;
 
+// export const HamburgerButton = styled.button`
+//   ${text20}
+//   display: flex;
+//   align-items: center;
+//   background: rgba(24, 24, 24, 0.4);
+//   backdrop-filter: blur(8px);
+//   -webkit-backdrop-filter: blur(8px);
+//   border: none;
+//   border-radius: 50px;
+//   padding: 10px 12px;
+//   cursor: pointer;
+//   z-index: 10;
+//   color: #ccc; 
+
+
+
+//   @media screen and (min-width: 1080.98px) {
+//     display: none;
+//   }
+// `;
+
 export const HamburgerButton = styled.button`
   ${text20}
   display: flex;
   align-items: center;
-  background: rgba(24, 24, 24, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: ${({ theme }) => theme.colors.background.glass};
   border: none;
   border-radius: 50px;
   padding: 10px 12px;
   cursor: pointer;
   z-index: 10;
-  color: ${theme.COLOR.OFFWHITE};
-
+  color: ${({ theme }) => theme.colors.text.secondary};
 
   @media screen and (min-width: 1080.98px) {
     display: none;
@@ -122,7 +167,7 @@ export const CloseButton = styled.button`
   align-self: flex-end;
   display: flex;
   justify-content: center;
-  color: ${theme.COLOR.OFFWHITE};
+  color: #ccc;
 
 `;
 
@@ -137,29 +182,53 @@ export const DrawerContent = styled.div`
 `;
 
 
+// export const SocialIconWrapper = styled.div`
+//   ${text18}
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 20px;
+//   color: #ffff;
+  
+//   .social-icon {
+//     transition: color 0.3s ease; 
+//   }
+
+//   .social-icon:hover {
+//     color: #eabc17;
+//   }
+     
+//    @media (max-width: 1080px) {
+//       display: none;
+//    }
+// `;
+
 export const SocialIconWrapper = styled.div`
   ${text18}
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  color: #ffff;
-  
+  color: ${({ theme }) => theme.colors.text.primary};
+
   .social-icon {
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
   }
 
   .social-icon:hover {
-    color: #eabc17;
+    color: ${({ theme }) => theme.colors.brand.primary};
   }
-     
-   @media (max-width: 1080px) {
-      display: none;
-   }
 `;
 
+
+// export const Logo = styled.h1`
+//  ${text30}
+//  color: #eabc17;
+//  font-family: "Josefin Sans", sans-serif;
+// `;
+
 export const Logo = styled.h1`
- ${text30}
- color: #eabc17;
- font-family: "Josefin Sans", sans-serif;
+  ${text30}
+  color: ${({ theme }) => theme.colors.brand.primary};
+  font-family: "Josefin Sans", sans-serif;
 `;

@@ -78,9 +78,6 @@ export const GreetingContainer = styled.div`
       background-color: #eabc17;
     }
   }
-  @media (max-width: 1080px) {
-    /* display: none; */
-  }
 `;
 export const Greeting = styled.h2`
   ${text12}
@@ -101,26 +98,36 @@ export const IntroDesc = styled.p`
 
 export const ImageContainer = styled.div`
   width: 50%;
-  aspect-ratio: 22 / 15;
+  aspect-ratio: 16 / 9;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 720.98px) {
     width: 80%;
-    aspect-ratio: 25 / 19;
+    aspect-ratio: 16 / 10;
+  }
+
+  @media (min-width: 721px) and (max-width: 1080px) {
+    width: 60%;
+    aspect-ratio: 16 / 9;
   }
 `;
 
-export const HeroImage = styled(Image)`
+
+export const HeroImage = styled(Image)<{ $theme?: string }>`
   width: 60%;
   height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
   position: relative;
   z-index: 2;
-  @media (max-width: 768px) {
+  transition: filter 0.3s ease;
+
+  filter: ${({ theme }) => (theme.mode === "dark" ? "grayscale(100%)" : "none")};
+
+  @media (max-width: 1080px) {
     width: 65%;
   }
 `;
